@@ -33,4 +33,9 @@ class AdminPostsController extends Controller
         Post::create($request->all());
         return redirect()->route('admin.posts.index');
     }
+	public function destroy($id)
+    {
+        Post::destroy($id);
+         return redirect()->route('admin.posts.index');
+    }
 }
